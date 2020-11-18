@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            xmlns:local="clr-namespace:DiceMaster.Views"
+            x:Class="DiceMaster.Views.MainPage">
+        <NavigationPage Title="Roll">
+            <x:Arguments>
+                <local:DiceRollPage />
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage Title="Favorites">
+            <x:Arguments>
+                <local:FavoritePage />
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage Title="History">
+            <x:Arguments>
+                <local:HistoryPage />
+            </x:Arguments>
+        </NavigationPage>
+</TabbedPage>

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "rkv16AuDFDUrwInRUucVJiaDAlJM6EZy3a5RYkFbqNyfsH+KrQkjOC2mG5OOEFMoax3aPEVqogcAthdpfahHyg==",
+  "success": true,
+  "projectFilePath": "C:\\apps\\TabletopDiceMaster\\TabletopDiceMaster\\DiceMaster\\DiceMaster.iOS\\DiceMaster.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.6.0.1141\\xamarin.forms.4.6.0.1141.nupkg.sha512"
+  ],
+  "logs": []
+}
