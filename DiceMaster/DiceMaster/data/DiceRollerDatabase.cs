@@ -44,7 +44,7 @@ namespace DiceMaster.data
 
             public Task<List<EntireRoll>> GetItemsNotDoneAsync()
             {
-                return Database.QueryAsync<EntireRoll>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
+                return Database.QueryAsync<EntireRoll>("SELECT * FROM [EntireRoll] WHERE [Done] = 0");
             }
 
             public Task<EntireRoll> GetItemAsync(int id)

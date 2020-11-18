@@ -5,9 +5,60 @@
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="diceToRollList">
-                
-            </ListView>
+            <CollectionView x:Name="ItemsListView"
+                ItemsSource="{Binding DiceRows}"
+                SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="10"  
+                            OutlineColor="Gray" 
+                            BackgroundColor="LightGray"
+                            Padding="20">
+                            <StackLayout Padding="10">
+                                <Label Text="Dice Roll"
+                                VerticalOptions="CenterAndExpand" 
+                                HorizontalOptions="CenterAndExpand" />
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="Dice Size:" Grid.Column="0" Grid.Row="0"/>
+                                    <Picker SelectedItem="{Binding DiceType}" Grid.Column="1" Grid.Row="0">
+                                        <Picker.Items>
+                                            <x:String>3</x:String>
+                                            <x:String>4</x:String>
+                                            <x:String>6</x:String>
+                                            <x:String>8</x:String>
+                                            <x:String>10</x:String>
+                                            <x:String>12</x:String>
+                                            <x:String>20</x:String>
+                                        </Picker.Items>
+                                    </Picker>
+                                    <Label Text="Quantity:" Grid.Column="2" Grid.Row="0"/>
+                                    <Entry Text="{Binding count}" Grid.Column="3" Grid.Row="0"/>
+                                    <Label Text="Modifier:" Grid.Column="0" Grid.Row="1"/>
+                                    <Entry Text="{Binding modifier}" Grid.Column="1" Grid.Row="1"/>
+                                    <Label Text="Combined:" Grid.Column="2" Grid.Row="1"/>
+                                    <CheckBox IsChecked="{Binding combined}" Grid.Column="3" Grid.Row="1"/>
+                                </Grid>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button Text="+"
+                WidthRequest      ="40"
+                HeightRequest     ="40"
+                CornerRadius      ="40"
+                VerticalOptions   ="Start"
+                HorizontalOptions ="End"
+                BackgroundColor   ="#F77DF9"/>
+            <Button Text="Roll the dice!"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

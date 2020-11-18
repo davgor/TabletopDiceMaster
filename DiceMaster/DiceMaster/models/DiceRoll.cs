@@ -6,7 +6,7 @@ namespace DiceMaster.models
 {
     class DiceRoll
     {
-        public int DiceType { get; set; }
+        public String DiceType { get; set; }
         public int count { get; set; }
         public Boolean combined { get; set; }
         public int modifier { get; set; }
@@ -15,7 +15,7 @@ namespace DiceMaster.models
         {
             Dice NewDice = new Dice();
             Random rnd = new Random();
-            NewDice.result = this.modifier + rnd.Next(1, this.DiceType + 1);
+            NewDice.result = this.modifier + rnd.Next(1, Int32.Parse(this.DiceType) + 1);
             DiceList.Add(NewDice);
         }
         public void RollDiceSet()
