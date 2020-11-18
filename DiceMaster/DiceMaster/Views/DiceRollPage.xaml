@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DiceMaster.Views.DiceRollPage"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="Black">
     <ContentPage.Content>
         <StackLayout>
             <CollectionView x:Name="ItemsListView"
@@ -10,14 +11,14 @@
                 SelectionMode="None">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame CornerRadius="10"  
-                            OutlineColor="Gray" 
-                            BackgroundColor="LightGray"
-                            Padding="20">
+                        <Frame OutlineColor="black" 
+                               BackgroundColor="#6D7684"
+                               Padding="20">
                             <StackLayout Padding="10">
-                                <Label Text="Dice Roll"
-                                VerticalOptions="CenterAndExpand" 
-                                HorizontalOptions="CenterAndExpand" />
+                                <Label Text="{Binding id, StringFormat='Dice Roll: {0}'}"
+                                       VerticalOptions="CenterAndExpand" 
+                                       HorizontalOptions="CenterAndExpand" 
+                                       TextColor="#20232F"/>
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition />
@@ -25,7 +26,11 @@
                                         <ColumnDefinition />
                                         <ColumnDefinition />
                                     </Grid.ColumnDefinitions>
-                                    <Label Text="Dice Size:" Grid.Column="0" Grid.Row="0"/>
+                                    <Label Text="Dice Size:" 
+                                           Grid.Column="0" 
+                                           Grid.Row="0" 
+                                           VerticalOptions="Center"
+                                           TextColor="#20232F"/>
                                     <Picker SelectedItem="{Binding DiceType}" Grid.Column="1" Grid.Row="0">
                                         <Picker.Items>
                                             <x:String>3</x:String>
@@ -37,28 +42,70 @@
                                             <x:String>20</x:String>
                                         </Picker.Items>
                                     </Picker>
-                                    <Label Text="Quantity:" Grid.Column="2" Grid.Row="0"/>
-                                    <Entry Text="{Binding count}" Grid.Column="3" Grid.Row="0"/>
-                                    <Label Text="Modifier:" Grid.Column="0" Grid.Row="1"/>
-                                    <Entry Text="{Binding modifier}" Grid.Column="1" Grid.Row="1"/>
-                                    <Label Text="Combined:" Grid.Column="2" Grid.Row="1"/>
-                                    <CheckBox IsChecked="{Binding combined}" Grid.Column="3" Grid.Row="1"/>
+                                    <Label Text="Quantity:" 
+                                           Grid.Column="2" 
+                                           Grid.Row="0" 
+                                           VerticalOptions="Center"
+                                           TextColor="#20232F"/>
+                                    <Entry Text="{Binding count}" 
+                                           Grid.Column="3" 
+                                           Grid.Row="0"/>
+                                    <Label Text="Modifier:" 
+                                           Grid.Column="0" 
+                                           Grid.Row="1" 
+                                           VerticalOptions="Center"
+                                           TextColor="#20232F"/>
+                                    <Entry Text="{Binding modifier}" 
+                                           Grid.Column="1" 
+                                           Grid.Row="1"/>
+                                    <Label Text="Combined:" 
+                                           Grid.Column="2" 
+                                           Grid.Row="1" 
+                                           VerticalOptions="Center"
+                                           TextColor="#20232F"/>
+                                    <CheckBox IsChecked="{Binding combined}" 
+                                              Grid.Column="3" 
+                                              Grid.Row="1"/>
                                 </Grid>
                             </StackLayout>
                         </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-            <Button Text="+"
-                WidthRequest      ="40"
-                HeightRequest     ="40"
-                CornerRadius      ="40"
-                VerticalOptions   ="Start"
-                HorizontalOptions ="End"
-                BackgroundColor   ="#F77DF9"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button Text="-"
+                        WidthRequest="40"
+                        HeightRequest="40"
+                        CornerRadius="40"
+                        VerticalOptions="Start"
+                        HorizontalOptions="Start"
+                        BackgroundColor="#20232F"
+                        TextColor="#90829E"
+                        Clicked="OnRemove"
+                        Grid.Column="0"/>
+                <Button Text="+"
+                        WidthRequest="40"
+                        HeightRequest="40"
+                        CornerRadius="40"
+                        VerticalOptions="Start"
+                        HorizontalOptions="End"
+                        BackgroundColor="#20232F"
+                        TextColor="#90829E"
+                        Clicked="OnAdd"
+                        Grid.Column="1"/>
+            </Grid>
             <Button Text="Roll the dice!"
-                VerticalOptions="CenterAndExpand"
-                HorizontalOptions="Center"/>
+                    TextColor="#90829E"
+                    BackgroundColor="#20232F"
+                    HorizontalOptions="Center"/>
+                
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -21,5 +21,17 @@ namespace DiceMaster.Views
 
             BindingContext = _viewModel = new DiceRollViewModel();
         }
+        async void OnSubmit(object sender, EventArgs args)
+        {
+
+        }
+        async void OnAdd(object sender, EventArgs args)
+        {
+            _viewModel.addEntry();
+        }
+        async void OnRemove(object sender, EventArgs args)
+        {
+            _viewModel.removeEntry();
+        }
     }
 }

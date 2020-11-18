@@ -6,6 +6,7 @@ namespace DiceMaster.models
 {
     class DiceRoll
     {
+        public int id { get; set; }
         public String DiceType { get; set; }
         public int count { get; set; }
         public Boolean combined { get; set; }

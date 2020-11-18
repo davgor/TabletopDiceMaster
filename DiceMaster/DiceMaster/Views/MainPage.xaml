@@ -2,7 +2,9 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
             xmlns:local="clr-namespace:DiceMaster.Views"
-            x:Class="DiceMaster.Views.MainPage">
+            x:Class="DiceMaster.Views.MainPage"
+            BarBackgroundColor="#20232F"
+            BarTextColor="#90829E">
         <NavigationPage Title="Roll">
             <x:Arguments>
                 <local:DiceRollPage />
