@@ -463,3 +463,11 @@ C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\android\assets\SQLite-net.dll
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\android\assets\SQLitePCLRaw.batteries_v2.dll
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\android\assets\SQLitePCLRaw.core.dll
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\android\assets\SQLitePCLRaw.lib.e_sqlite3.android.dll
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\android\assets\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\android\assets\System.Buffers.dll
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\android\assets\System.Memory.dll
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\android\assets\System.Runtime.CompilerServices.Unsafe.dll

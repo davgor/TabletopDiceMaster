@@ -5,8 +5,6 @@ C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\bin\Debug\ne
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\netstandard2.0\DiceMaster.AssemblyInfoInputs.cache
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\netstandard2.0\DiceMaster.AssemblyInfo.cs
-C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\netstandard2.0\DiceMaster.csproj.CoreCompileInputs.cache
-C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\netstandard2.0\XamlC.stamp
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\netstandard2.0\DiceMaster.dll
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\netstandard2.0\ref\DiceMaster.dll
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\netstandard2.0\DiceMaster.pdb
@@ -15,3 +13,6 @@ C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\ne
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\netstandard2.0\Views\DiceRollPage.xaml.g.cs
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\netstandard2.0\Views\FavoritePage.xaml.g.cs
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\netstandard2.0\Views\HistoryPage.xaml.g.cs
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\netstandard2.0\Views\NewDiceRollListPage.xaml.g.cs
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\netstandard2.0\DiceMaster.csproj.CoreCompileInputs.cache
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\netstandard2.0\XamlC.stamp

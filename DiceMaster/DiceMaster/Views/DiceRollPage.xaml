@@ -5,9 +5,9 @@
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Dice rolling page"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <ListView x:Name="diceToRollList">
+                
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
