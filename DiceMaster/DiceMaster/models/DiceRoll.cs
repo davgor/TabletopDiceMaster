@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DiceMaster.models
 {
-    class DiceRoll
+    public class DiceRoll
     {
         public int id { get; set; }
         public String DiceType { get; set; }

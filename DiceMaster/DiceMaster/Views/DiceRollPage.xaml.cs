@@ -2,6 +2,7 @@
 using DiceMaster.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,13 +24,13 @@ namespace DiceMaster.Views
         }
         async void OnSubmit(object sender, EventArgs args)
         {
-
+            await Navigation.PushAsync((new DiceResultsPage(_viewModel.DiceRows)));
         }
-        async void OnAdd(object sender, EventArgs args)
+        void OnAdd(object sender, EventArgs args)
         {
             _viewModel.addEntry();
         }
-        async void OnRemove(object sender, EventArgs args)
+        void OnRemove(object sender, EventArgs args)
         {
             _viewModel.removeEntry();
         }

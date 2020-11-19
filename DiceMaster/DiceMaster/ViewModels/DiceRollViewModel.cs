@@ -15,7 +15,10 @@ namespace DiceMaster.ViewModels
             DiceRows = new ObservableCollection<DiceRoll>();
             addEntry();
         }
-
+        public ObservableCollection<DiceRoll> getEntries()
+        {
+            return DiceRows;
+        }
         public void removeEntry()
         {
             if (DiceRows.Count != 0)

@@ -104,7 +104,8 @@
             <Button Text="Roll the dice!"
                     TextColor="#90829E"
                     BackgroundColor="#20232F"
-                    HorizontalOptions="Center"/>
+                    HorizontalOptions="Center"
+                    Clicked="OnSubmit"/>
                 
         </StackLayout>
     </ContentPage.Content>

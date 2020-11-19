@@ -15,3 +15,4 @@ C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\ne
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\netstandard2.0\Views\HistoryPage.xaml.g.cs
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\netstandard2.0\DiceMaster.csproj.CoreCompileInputs.cache
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\netstandard2.0\XamlC.stamp
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\netstandard2.0\Views\DiceResultsPage.xaml.g.cs

@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace DiceMaster.models
 {
-    class EntireRoll
+    public class EntireRoll
     {
         public int id { get; set; }
-        public List<DiceRoll> all = new List<DiceRoll>();
-        public string name { get; set; }
-        public void addToList(DiceRoll rolledDice)
-        {
-            all.Add(rolledDice);
-        }
+        public ObservableCollection<DiceRoll> all = new ObservableCollection<DiceRoll>();
+        public string Description { get; set; }
+        public Boolean favorite { get; set; }
         public void ReRollEntireRoll()
         {
             foreach (DiceRoll diceRoll in all)
