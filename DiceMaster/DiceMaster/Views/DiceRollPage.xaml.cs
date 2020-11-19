@@ -24,7 +24,16 @@ namespace DiceMaster.Views
         }
         async void OnSubmit(object sender, EventArgs args)
         {
-            await Navigation.PushAsync((new DiceResultsPage(_viewModel.DiceRows)));
+            string message = _viewModel.runEdits();
+            if (message.Equals(""))
+            {
+                await Navigation.PushAsync((new DiceResultsPage(_viewModel.DiceRows)));
+            } else
+            {
+                await DisplayAlert("Alert", message, "OK");
+                //display error message here 
+            }
+            
         }
         void OnAdd(object sender, EventArgs args)
         {

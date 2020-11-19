@@ -21,10 +21,12 @@
                                        TextColor="#20232F"/>
                                 <Grid>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition />
-                                        <ColumnDefinition />
-                                        <ColumnDefinition />
-                                        <ColumnDefinition />
+                                        <ColumnDefinition Width="60"/>
+                                        <ColumnDefinition Width="40"/>
+                                        <ColumnDefinition Width="60"/>
+                                        <ColumnDefinition Width="40"/>
+                                        <ColumnDefinition Width="60"/>
+                                        <ColumnDefinition Width="40"/>
                                     </Grid.ColumnDefinitions>
                                     <Label Text="Dice Size:" 
                                            Grid.Column="0" 
@@ -51,21 +53,13 @@
                                            Grid.Column="3" 
                                            Grid.Row="0"/>
                                     <Label Text="Modifier:" 
-                                           Grid.Column="0" 
-                                           Grid.Row="1" 
+                                           Grid.Column="4" 
+                                           Grid.Row="0" 
                                            VerticalOptions="Center"
                                            TextColor="#20232F"/>
                                     <Entry Text="{Binding modifier}" 
-                                           Grid.Column="1" 
-                                           Grid.Row="1"/>
-                                    <Label Text="Combined:" 
-                                           Grid.Column="2" 
-                                           Grid.Row="1" 
-                                           VerticalOptions="Center"
-                                           TextColor="#20232F"/>
-                                    <CheckBox IsChecked="{Binding combined}" 
-                                              Grid.Column="3" 
-                                              Grid.Row="1"/>
+                                           Grid.Column="5" 
+                                           Grid.Row="0"/>
                                 </Grid>
                             </StackLayout>
                         </Frame>

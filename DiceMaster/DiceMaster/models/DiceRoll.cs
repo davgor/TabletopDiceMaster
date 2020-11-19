@@ -9,7 +9,6 @@ namespace DiceMaster.models
         public int id { get; set; }
         public String DiceType { get; set; }
         public int count { get; set; }
-        public Boolean combined { get; set; }
         public int modifier { get; set; }
         public List<Dice> DiceList = new List<Dice>();
         public void RollTheDie()

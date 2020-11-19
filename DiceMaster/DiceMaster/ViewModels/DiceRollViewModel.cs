@@ -32,11 +32,23 @@ namespace DiceMaster.ViewModels
             DiceRows.Add(new DiceRoll
             {
                 id = DiceRows.Count + 1,
-                DiceType = "3",
+                DiceType = "6",
                 count = 1,
                 modifier = 0,
-                combined = false
             });
+        }
+        public string runEdits()
+        {
+            string message = "";
+            foreach(DiceRoll testing in DiceRows)
+            {
+                if (testing.count == 0)
+                {
+                    message = "Dice Roll: " + testing.id + " Quantity must be numeric, and greater then zero" ;
+                }
+                
+            }
+            return message;
         }
     }
 }

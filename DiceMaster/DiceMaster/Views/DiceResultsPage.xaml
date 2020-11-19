@@ -4,9 +4,64 @@
              x:Class="DiceMaster.Views.DiceResultsPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <CollectionView x:Name="ItemsListView"
+                ItemsSource="{Binding DiceRows}"
+                SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame OutlineColor="black" 
+                               BackgroundColor="#6D7684"
+                               Padding="20">
+                            <StackLayout Padding="10">
+                                <Label Text="{Binding id, StringFormat='Dice Roll: {0}'}"
+                                       VerticalOptions="CenterAndExpand" 
+                                       HorizontalOptions="CenterAndExpand" 
+                                       TextColor="#20232F"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="Dice Size:" 
+                                           Grid.Column="0" 
+                                           Grid.Row="0" 
+                                           VerticalOptions="Center"
+                                           TextColor="#20232F"/>
+                                    <Label Text="{Binding DiceType}" 
+                                           Grid.Column="1" 
+                                           Grid.Row="0" 
+                                           VerticalOptions="Center"
+                                           TextColor="#20232F"/>
+                                    <Label Text="Quantity:" 
+                                           Grid.Column="2" 
+                                           Grid.Row="0" 
+                                           VerticalOptions="Center"
+                                           TextColor="#20232F"/>
+                                    <Label Text="{Binding count}" 
+                                           Grid.Column="3" 
+                                           Grid.Row="0" 
+                                           VerticalOptions="Center"
+                                           TextColor="#20232F"/>
+                                    <Label Text="Modifier:" 
+                                           Grid.Column="4" 
+                                           Grid.Row="0" 
+                                           VerticalOptions="Center"
+                                           TextColor="#20232F"/>
+                                    <Label Text="{Binding modifier}" 
+                                           Grid.Column="5" 
+                                           Grid.Row="0" 
+                                           VerticalOptions="Center"
+                                           TextColor="#20232F"/>
+                                </Grid>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
