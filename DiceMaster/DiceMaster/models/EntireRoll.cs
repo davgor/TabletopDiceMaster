@@ -15,7 +15,7 @@ namespace DiceMaster.models
         {
             foreach (DiceRoll diceRoll in all)
             {
-                diceRoll.ReRollDiceSet();
+                diceRoll.RollDiceSet();
             }
         }
     }

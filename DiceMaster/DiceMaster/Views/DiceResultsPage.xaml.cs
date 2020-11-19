@@ -15,7 +15,7 @@ namespace DiceMaster.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DiceResultsPage : ContentPage
     {
-        DiceResultsViewModel _viewModel;
+        public DiceResultsViewModel _viewModel;
         public DiceResultsPage(ObservableCollection<DiceRoll> submittedRolls)
         {
             InitializeComponent();

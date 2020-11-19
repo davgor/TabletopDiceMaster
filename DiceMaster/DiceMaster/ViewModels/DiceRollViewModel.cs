@@ -29,13 +29,7 @@ namespace DiceMaster.ViewModels
 
         public void addEntry()
         {
-            DiceRows.Add(new DiceRoll
-            {
-                id = DiceRows.Count + 1,
-                DiceType = "6",
-                count = 1,
-                modifier = 0,
-            });
+            DiceRows.Add(new DiceRoll(DiceRows.Count + 1));
         }
         public string runEdits()
         {
