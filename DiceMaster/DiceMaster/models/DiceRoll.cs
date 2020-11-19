@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DiceMaster.Views;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
@@ -13,8 +14,8 @@ namespace DiceMaster.models
         public String DiceType { get; set; }
         public int count { get; set; }
         public int modifier { get; set; }
-        public ObservableCollection<Dice> DiceList { get; set; }
-        public ObservableCollection<RepeatingDice> RepeatingDiceList { get; set; }
+        public ObservableCollection<Dice> DiceList { get; }
+        public ObservableCollection<RepeatingDice> RepeatingDiceList { get; }
         public ICommand AdvancedFunctions  { get; }
         public int total { get; set; }
         public DiceRoll(int newId)
@@ -31,9 +32,20 @@ namespace DiceMaster.models
         {
             Dice NewDice = new Dice();
             Random rnd = new Random();
-            NewDice.result = this.modifier + rnd.Next(1, Int32.Parse(this.DiceType) + 1);
-            total += NewDice.result;
+            NewDice.result = rnd.Next(1, Int32.Parse(this.DiceType) + 1);
+            NewDice.modifiedResult = NewDice.result + modifier;
+            total += NewDice.modifiedResult;
             DiceList.Add(NewDice);
+        }
+        public List<Dice> RollTheDie(List<Dice> tempDiceList)
+        {
+            Dice NewDice = new Dice();
+            Random rnd = new Random();
+            NewDice.result = rnd.Next(1, Int32.Parse(this.DiceType) + 1);
+            NewDice.modifiedResult = NewDice.result + modifier;
+            total += NewDice.modifiedResult;
+            tempDiceList.Add(NewDice);
+            return tempDiceList;
         }
         public void RollDiceSet()
         {
@@ -85,6 +97,22 @@ namespace DiceMaster.models
         public string explodedsOnNum(int num)
         {
             string message = "";
+            List<Dice> tempDiceList = new List<Dice>();
+            foreach (Dice die in DiceList)
+            {
+                if (die.result == num)
+                {
+                    tempDiceList = RollTheDie(tempDiceList);
+                    tempDiceList = RollTheDie(tempDiceList);
+                }
+            }
+            foreach (Dice die in tempDiceList)
+            {
+                this.count++;
+                this.DiceList.Add(die);
+            }
+            RepeatingDiceList.Clear();
+            updateRepeatingList();
             return message;
         }
         async public void superRollerFunctions(string x)
@@ -97,15 +125,25 @@ namespace DiceMaster.models
                 if (message.Equals(""))
                 {
                     await Application.Current.MainPage.DisplayAlert("Done", "Roll has been updated", "OK");
+
+                } 
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert("Error", message, "OK");
                 }
 
-            } else if (action.Equals("Explode dice"))
+            } 
+            else if (action.Equals("Explode dice"))
             {
-                action = await Application.Current.MainPage.DisplayPromptAsync("ReRolling", "Enter the Dice face you'd like to Explode by 2", initialValue: "1", keyboard: Keyboard.Numeric);
+                action = await Application.Current.MainPage.DisplayPromptAsync("ReRolling", "Enter the Dice face you'd like to Explode by 2", initialValue: "6", keyboard: Keyboard.Numeric);
                 string message = explodedsOnNum(Int32.Parse(action));
                 if (message.Equals(""))
                 {
                     await Application.Current.MainPage.DisplayAlert("Done", "Roll has been updated", "OK");
+                }
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert("Error", message, "OK");
                 }
             } else if (action.Equals("Roll again")) {
                 

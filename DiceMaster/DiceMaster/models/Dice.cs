@@ -7,5 +7,6 @@ namespace DiceMaster.models
     public class Dice
     {
         public int result { get; set; }
+        public int modifiedResult { get; set; }
     }
 }
