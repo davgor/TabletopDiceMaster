@@ -4,6 +4,8 @@
             xmlns:local="clr-namespace:DiceMaster.Views"
             x:Class="DiceMaster.Views.MainPage"
             BarBackgroundColor="#20232F"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
             BarTextColor="#90829E">
         <NavigationPage Title="Roll">
             <x:Arguments>

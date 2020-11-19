@@ -79,6 +79,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition />
+                    <ColumnDefinition />
                 </Grid.ColumnDefinitions>
                 <Button Text="-"
                         WidthRequest="40"
@@ -90,6 +91,12 @@
                         TextColor="#90829E"
                         Clicked="OnRemove"
                         Grid.Column="0"/>
+                <Button Text="Roll the dice!"
+                        TextColor="#90829E"
+                        BackgroundColor="#20232F"
+                        HorizontalOptions="Center"
+                        Clicked="OnSubmit"
+                        Grid.Column="1"/>
                 <Button Text="+"
                         WidthRequest="40"
                         HeightRequest="40"
@@ -99,14 +106,8 @@
                         BackgroundColor="#20232F"
                         TextColor="#90829E"
                         Clicked="OnAdd"
-                        Grid.Column="1"/>
+                        Grid.Column="2"/>
             </Grid>
-            <Button Text="Roll the dice!"
-                    TextColor="#90829E"
-                    BackgroundColor="#20232F"
-                    HorizontalOptions="Center"
-                    Clicked="OnSubmit"/>
-                
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
