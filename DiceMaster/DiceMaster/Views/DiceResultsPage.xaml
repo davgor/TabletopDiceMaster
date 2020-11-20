@@ -66,6 +66,10 @@
                                                         VerticalOptions="Center"
                                                         TextColor="#20232F"/>
                                             </Grid>
+                                            <Label Text="{Binding total, StringFormat='Total: {0}'}"
+                                                   VerticalOptions="CenterAndExpand" 
+                                                   HorizontalOptions="CenterAndExpand" 
+                                                   TextColor="#20232F"/>
                                         </StackLayout>
                                     </Expander.Header>
                                     <StackLayout>
@@ -73,36 +77,33 @@
                                         Text="Advanced Functions"
                                         BackgroundColor="#20232F"
                                         TextColor="#90829E"/>
-                                        <Label Text="{Binding total, StringFormat='Total: {0}'}"
-                                       VerticalOptions="CenterAndExpand" 
-                                       HorizontalOptions="CenterAndExpand" 
-                                       TextColor="#20232F"/>
                                         <CollectionView x:Name="Items2ListView"
                                                 ItemsSource="{Binding RepeatingDiceList}"
                                                 SelectionMode="None"
                                                 EmptyView="No items currently exist !">
                                             <CollectionView.ItemTemplate>
                                                 <DataTemplate>
-                                                    <Frame OutlineColor="black" 
-                                                   BackgroundColor="#6D7684"
-                                                   Padding="20">
-                                                        <StackLayout Padding="10">
-                                                            <Grid>
-                                                                <Grid.ColumnDefinitions>
-                                                                    <ColumnDefinition />
-                                                                    <ColumnDefinition />
-                                                                </Grid.ColumnDefinitions>
-                                                                <Label Text="{Binding DiceFace, StringFormat='{0}'}" 
+                                                    <StackLayout Padding="10">
+                                                        <Grid>
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition />
+                                                                <ColumnDefinition />
+                                                                <ColumnDefinition />
+                                                            </Grid.ColumnDefinitions>
+                                                            <Label Text="{Binding DiceFace, StringFormat='{0}'}" 
                                                                    VerticalOptions="Center"
                                                                    TextColor="#20232F"
                                                                    Grid.Column="0"/>
-                                                                <Label Text="{Binding DiceCount, StringFormat='{0}'}" 
+                                                            <Label Text="{Binding DiceCount, StringFormat='{0}'}" 
                                                                    VerticalOptions="Center"
                                                                    TextColor="#20232F"
                                                                    Grid.Column="1"/>
-                                                            </Grid>
-                                                        </StackLayout>
-                                                    </Frame>
+                                                            <Label Text="{Binding modifiedFace, StringFormat='{0}'}" 
+                                                                   VerticalOptions="Center"
+                                                                   TextColor="#20232F"
+                                                                   Grid.Column="2"/>
+                                                        </Grid>
+                                                    </StackLayout>
                                                 </DataTemplate>
                                             </CollectionView.ItemTemplate>
                                         </CollectionView>

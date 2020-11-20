@@ -69,6 +69,7 @@ namespace DiceMaster.models
                     if (repeat.DiceFace == die.result)
                     {
                         repeat.DiceCount += 1;
+                        repeat.modifiedFace = repeat.DiceFace + modifier;
                         int[] idArray = { this.id, repeat.DiceFace };
                         repeat.id = idArray;
                     }

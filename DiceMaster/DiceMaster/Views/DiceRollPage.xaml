@@ -42,6 +42,7 @@
                                             <x:String>10</x:String>
                                             <x:String>12</x:String>
                                             <x:String>20</x:String>
+                                            <x:String>100</x:String>
                                         </Picker.Items>
                                     </Picker>
                                     <Label Text="Quantity:" 
