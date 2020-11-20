@@ -21,5 +21,10 @@ namespace DiceMaster.Views
             InitializeComponent();
             BindingContext = _viewModel = new DiceResultsViewModel(submittedRolls);
         }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            string result = await DisplayPromptAsync("Favorite", "What would you like to name this Roll set?");
+        }
     }
 }
