@@ -8,10 +8,8 @@ using Xamarin.Forms;
 
 namespace DiceMaster.ViewModels
 {
-    public class DiceResultsViewModel
-    {
-        public ObservableCollection<DiceRoll> DiceRows { get; }
-        
+    public class DiceResultsViewModel : BaseViewModel
+    {   
         public DiceResultsViewModel(ObservableCollection<DiceRoll> submittedRolls)
         {
             DiceRows = submittedRolls;
@@ -19,6 +17,10 @@ namespace DiceMaster.ViewModels
             {
                 roll.RollDiceSet();
             }
+        }
+        public DiceResultsViewModel(EntireRoll oldRoll)
+        {
+            DiceRows = oldRoll.all;
         }
     }
 }

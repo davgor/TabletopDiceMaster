@@ -6,14 +6,17 @@ using System.Text;
 
 namespace DiceMaster.ViewModels
 {
-    class DiceRollViewModel
+    class DiceRollViewModel : BaseViewModel
     {
-        public ObservableCollection<DiceRoll> DiceRows { get; }
 
         public DiceRollViewModel()
         {
             DiceRows = new ObservableCollection<DiceRoll>();
             addEntry();
+        }
+        public DiceRollViewModel(EntireRoll originallRoll)
+        {
+            DiceRows = originallRoll.all;//refresh screen with older DiceRoll
         }
         public ObservableCollection<DiceRoll> getEntries()
         {
