@@ -1,4 +1,5 @@
-﻿using DiceMaster.models;
+﻿using DiceMaster.data;
+using DiceMaster.models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -9,5 +10,6 @@ namespace DiceMaster.ViewModels
     public class BaseViewModel
     {
         public ObservableCollection<DiceRoll> DiceRows { get; set; }
+        public DiceRollerDatabase diceDB = new DiceRollerDatabase();
     }
 }

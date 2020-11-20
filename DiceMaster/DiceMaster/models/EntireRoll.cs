@@ -18,17 +18,24 @@ namespace DiceMaster.models
                 diceRoll.RollDiceSet();
             }
         }
-        public void EntireRollSave(Boolean favInp, String descInp, ObservableCollection<DiceRoll> favDiceRolls)
+        public void EntireRollFavorite(String descInp, ObservableCollection<DiceRoll> favDiceRolls)
         {
-            favorite = favInp;
+            favorite = true;
             Description = descInp;
             all = favDiceRolls;
             id = getUniqueId();
         }
+        public void EntireRollHistory(ObservableCollection<DiceRoll> historyDiceRolls)
+        {
+            favorite = false;
+            Description = "";
+            all = historyDiceRolls;
+            id = getUniqueId();
+        }
         private int getUniqueId()
         {
-            int newId = 1;
-            //Put SQLIte code call here to get next ID number 
+            Random rnd = new Random();
+            int newId = rnd.Next(1000000, 9999999);
             return newId;
         }
     }

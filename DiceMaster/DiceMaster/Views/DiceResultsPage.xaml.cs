@@ -25,6 +25,17 @@ namespace DiceMaster.Views
         private async void Button_Clicked(object sender, EventArgs e)
         {
             string result = await DisplayPromptAsync("Favorite", "What would you like to name this Roll set?");
+            if (result == "")
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", "Please enter a name", "OK");
+            } 
+            else
+            {
+                EntireRoll entireRoll = new EntireRoll();
+                entireRoll.EntireRollFavorite(result, _viewModel.DiceRows);
+                _viewModel.saveFavorite(entireRoll);
+            }
+
         }
     }
 }

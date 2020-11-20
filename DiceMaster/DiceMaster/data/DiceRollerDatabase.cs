@@ -8,10 +8,8 @@ using System.Threading.Tasks;
 
 namespace DiceMaster.data
 {
-    class DiceRollerDatabase
+    public class DiceRollerDatabase
     {
-        public class TodoItemDatabase
-        {
             static readonly Lazy<SQLiteAsyncConnection> lazyInitializer = new Lazy<SQLiteAsyncConnection>(() =>
             {
                 return new SQLiteAsyncConnection(Constants.DatabasePath, Constants.Flags);
@@ -20,7 +18,7 @@ namespace DiceMaster.data
             static SQLiteAsyncConnection Database => lazyInitializer.Value;
             static bool initialized = false;
 
-            public TodoItemDatabase()
+            public DiceRollerDatabase()
             {
                 InitializeAsync().SafeFireAndForget(false);
             }
@@ -69,5 +67,4 @@ namespace DiceMaster.data
                 return Database.DeleteAsync(item);
             }
         }
-    }
 }
