@@ -30,19 +30,13 @@ namespace DiceMaster.models
         }
         public void RollTheDie()
         {
-            Dice NewDice = new Dice();
-            Random rnd = new Random();
-            NewDice.result = rnd.Next(1, Int32.Parse(this.DiceType) + 1);
-            NewDice.modifiedResult = NewDice.result + modifier;
+            Dice NewDice = new Dice(modifier, DiceType);
             total += NewDice.modifiedResult;
             DiceList.Add(NewDice);
         }
         public List<Dice> RollTheDie(List<Dice> tempDiceList)
         {
-            Dice NewDice = new Dice();
-            Random rnd = new Random();
-            NewDice.result = rnd.Next(1, Int32.Parse(this.DiceType) + 1);
-            NewDice.modifiedResult = NewDice.result + modifier;
+            Dice NewDice = new Dice(modifier, DiceType);
             total += NewDice.modifiedResult;
             tempDiceList.Add(NewDice);
             return tempDiceList;
@@ -91,6 +85,15 @@ namespace DiceMaster.models
         public string reRollOnNum(int num)
         {
             string message = "";
+            foreach (Dice die in DiceList)
+            {
+                if (die.result == num)
+                {
+                    die.reRoll(DiceType);
+                }
+            }
+            RepeatingDiceList.Clear();
+            updateRepeatingList();
             return message;
 
         }

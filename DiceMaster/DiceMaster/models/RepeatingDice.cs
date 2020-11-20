@@ -9,5 +9,6 @@ namespace DiceMaster.models
         public int[] id { get; set; }
         public int DiceFace { get; set; }
         public int DiceCount { get; set; }
+        public int modifiedFace { get; set; }
     }
 }
