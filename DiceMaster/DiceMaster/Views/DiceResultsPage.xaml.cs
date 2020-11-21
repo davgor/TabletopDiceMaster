@@ -31,9 +31,7 @@ namespace DiceMaster.Views
             } 
             else
             {
-                EntireRoll entireRoll = new EntireRoll();
-                entireRoll.EntireRollFavorite(result, _viewModel.DiceRows);
-                _viewModel.saveFavorite(entireRoll);
+                _viewModel.saveObject(result);
             }
 
         }

@@ -1,4 +1,6 @@
-﻿using DiceMaster.models;
+﻿using DiceMaster.data;
+using DiceMaster.models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,24 +13,28 @@ namespace DiceMaster.ViewModels
 {
     public class DiceResultsViewModel : BaseViewModel
     {   
+        SQLiteEntireRoll saveFormat { get; set; }
         public DiceResultsViewModel(ObservableCollection<DiceRoll> submittedRolls)
         {
+            saveFormat = new SQLiteEntireRoll();
             DiceRows = submittedRolls;
             foreach(DiceRoll roll in DiceRows)
             {
                 roll.RollDiceSet();
             }
-            EntireRoll entireRoll = new EntireRoll();
-            entireRoll.EntireRollHistory(DiceRows);
-            diceDB.SaveItemAsync(entireRoll);
+            saveObject("");
         }
         public DiceResultsViewModel(EntireRoll oldRoll)
         {
             DiceRows = oldRoll.all;
         }
-        public void saveFavorite(EntireRoll entireRoll)
+        public void saveObject(String name)
         {
-            diceDB.SaveItemAsync(entireRoll);
+            saveFormat.Name = name;
+            saveFormat.setDate();
+            saveFormat.favorite = (!name.Equals(""));
+            saveFormat.entireRollString = JsonConvert.SerializeObject(DiceRows);
+            saveFormat.SQLiteSave();
         }
     }
 }

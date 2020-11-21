@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "A5skPa7J6vm+9kCNZfAFfe7s8dGoOKnjy5jwdlZKYpbRIjQFaAX7ByNMFK5l6TCRPUkrXrVLw0/ZSDePR/ms1w==",
+  "dgSpecHash": "bwjQkv4W9274bOjvube2JA4B/5YW2rc0PZ6vIqCBBSVkvJCVhCZ7WLPTktangtmU69lFlXivJ/O31DmO+KR3fg==",
   "success": true,
   "projectFilePath": "C:\\apps\\TabletopDiceMaster\\TabletopDiceMaster\\DiceMaster\\DiceMaster.Android\\DiceMaster.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\davgo\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\davgo\\.nuget\\packages\\sqlite-net-pcl\\1.7.335\\sqlite-net-pcl.1.7.335.nupkg.sha512",
     "C:\\Users\\davgo\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.3\\sqlitepclraw.bundle_green.2.0.3.nupkg.sha512",
     "C:\\Users\\davgo\\.nuget\\packages\\sqlitepclraw.core\\2.0.3\\sqlitepclraw.core.2.0.3.nupkg.sha512",

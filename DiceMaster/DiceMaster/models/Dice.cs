@@ -15,7 +15,7 @@ namespace DiceMaster.models
             result = rnd.Next(1, Int32.Parse(diceType) + 1);
             modifiedResult = result + trueModifier;
         }
-        public Dice(int modifier, string diceType)
+        public void newDice(int modifier, string diceType)
         {
             Random rnd = new Random();
             result = rnd.Next(1, Int32.Parse(diceType) + 1);

@@ -471,3 +471,4 @@ C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\android\assets\System.Buffers.dll
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\android\assets\System.Memory.dll
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\android\assets\System.Runtime.CompilerServices.Unsafe.dll
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll

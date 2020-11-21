@@ -10,6 +10,5 @@ namespace DiceMaster.ViewModels
     public class BaseViewModel
     {
         public ObservableCollection<DiceRoll> DiceRows { get; set; }
-        public DiceRollerDatabase diceDB = new DiceRollerDatabase();
     }
 }

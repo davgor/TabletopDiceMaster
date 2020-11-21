@@ -5,6 +5,7 @@ public class MonoPackageManager_Resources {
 		"DiceMaster.Android.dll",
 		"DiceMaster.dll",
 		"FormsViewGroup.dll",
+		"Newtonsoft.Json.dll",
 		"SQLite-net.dll",
 		"SQLitePCLRaw.batteries_v2.dll",
 		"SQLitePCLRaw.core.dll",

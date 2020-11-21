@@ -14,11 +14,11 @@ namespace DiceMaster.models
         public String DiceType { get; set; }
         public int count { get; set; }
         public int modifier { get; set; }
-        public ObservableCollection<Dice> DiceList { get; }
-        public ObservableCollection<RepeatingDice> RepeatingDiceList { get; }
-        public ICommand AdvancedFunctions  { get; }
+        public ObservableCollection<Dice> DiceList { get; set; }
+        public ObservableCollection<RepeatingDice> RepeatingDiceList { get; set; }
+        //public ICommand AdvancedFunctions  { get; set; }
         public int total { get; set; }
-        public DiceRoll(int newId)
+        public void newDiceRoll(int newId)
         {
             id = newId;
             DiceType = "6";
@@ -26,17 +26,19 @@ namespace DiceMaster.models
             modifier = 0;
             DiceList = new ObservableCollection<Dice>();
             RepeatingDiceList = new ObservableCollection<RepeatingDice>();
-            AdvancedFunctions = new Command<string>(superRollerFunctions);
+            //AdvancedFunctions = new Command<string>(superRollerFunctions);
         }
         public void RollTheDie()
         {
-            Dice NewDice = new Dice(modifier, DiceType);
+            Dice NewDice = new Dice();
+            NewDice.newDice(modifier, DiceType);
             total += NewDice.modifiedResult;
             DiceList.Add(NewDice);
         }
         public List<Dice> RollTheDie(List<Dice> tempDiceList)
         {
-            Dice NewDice = new Dice(modifier, DiceType);
+            Dice NewDice = new Dice();
+            NewDice.newDice(modifier, DiceType);
             total += NewDice.modifiedResult;
             tempDiceList.Add(NewDice);
             return tempDiceList;

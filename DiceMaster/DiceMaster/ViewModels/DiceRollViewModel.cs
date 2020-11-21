@@ -32,7 +32,9 @@ namespace DiceMaster.ViewModels
 
         public void addEntry()
         {
-            DiceRows.Add(new DiceRoll(DiceRows.Count + 1));
+            DiceRoll diceRoll = new DiceRoll();
+            diceRoll.newDiceRoll(DiceRows.Count + 1);
+            DiceRows.Add(diceRoll);
         }
         public string runEdits()
         {

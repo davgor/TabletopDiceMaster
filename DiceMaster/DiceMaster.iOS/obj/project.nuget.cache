@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "zKewChI8NObJlBLncmTmo26/f/IvTPM6YWSXsi4EBLpUnI42jEQvDcX+9hTFOf0K39mHJG/enp9/RHkXeQd1rA==",
+  "dgSpecHash": "o0b24+FELGyPzzvbqOZOlKJRApoI10m73OAsKLUjQpbBIcBj/nTGsV6dwGAs6jkYc5fDkLlb0O/+B3KzIpg2HQ==",
   "success": true,
   "projectFilePath": "C:\\apps\\TabletopDiceMaster\\TabletopDiceMaster\\DiceMaster\\DiceMaster.iOS\\DiceMaster.iOS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\davgo\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\davgo\\.nuget\\packages\\sqlite-net-pcl\\1.7.335\\sqlite-net-pcl.1.7.335.nupkg.sha512",
     "C:\\Users\\davgo\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.3\\sqlitepclraw.bundle_green.2.0.3.nupkg.sha512",
     "C:\\Users\\davgo\\.nuget\\packages\\sqlitepclraw.core\\2.0.3\\sqlitepclraw.core.2.0.3.nupkg.sha512",

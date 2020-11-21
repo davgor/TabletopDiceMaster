@@ -10,13 +10,12 @@ namespace DiceMaster.data
 {
     public class DiceRollerDatabase
     {
-            static readonly Lazy<SQLiteAsyncConnection> lazyInitializer = new Lazy<SQLiteAsyncConnection>(() =>
+        static SQLiteAsyncConnection Database => lazyInitializer.Value;
+        static bool initialized = false;
+        static readonly Lazy<SQLiteAsyncConnection> lazyInitializer = new Lazy<SQLiteAsyncConnection>(() =>
             {
                 return new SQLiteAsyncConnection(Constants.DatabasePath, Constants.Flags);
             });
-
-            static SQLiteAsyncConnection Database => lazyInitializer.Value;
-            static bool initialized = false;
 
             public DiceRollerDatabase()
             {
@@ -27,30 +26,30 @@ namespace DiceMaster.data
             {
                 if (!initialized)
                 {
-                    if (!Database.TableMappings.Any(m => m.MappedType.Name == typeof(EntireRoll).Name))
+                    if (!Database.TableMappings.Any(m => m.MappedType.Name == typeof(SQLiteEntireRoll).Name))
                     {
-                        await Database.CreateTablesAsync(CreateFlags.None, typeof(EntireRoll)).ConfigureAwait(false);
+                        await Database.CreateTablesAsync(CreateFlags.None, typeof(SQLiteEntireRoll)).ConfigureAwait(false);
                     }
                     initialized = true;
                 }
             }
 
-            public Task<List<EntireRoll>> GetItemsAsync()
+            public Task<List<SQLiteEntireRoll>> GetItemsAsync()
             {
-                return Database.Table<EntireRoll>().ToListAsync();
+                return Database.Table<SQLiteEntireRoll>().ToListAsync();
             }
 
-            public Task<List<EntireRoll>> GetItemsNotDoneAsync()
+            public Task<List<SQLiteEntireRoll>> GetItemsNotDoneAsync()
             {
-                return Database.QueryAsync<EntireRoll>("SELECT * FROM [EntireRoll] WHERE [Done] = 0");
+                return Database.QueryAsync<SQLiteEntireRoll>("SELECT * FROM [EntireRoll] WHERE [Done] = 0");
             }
 
-            public Task<EntireRoll> GetItemAsync(int id)
+            public Task<SQLiteEntireRoll> GetItemAsync(int id)
             {
-                return Database.Table<EntireRoll>().Where(i => i.id == id).FirstOrDefaultAsync();
+                return Database.Table<SQLiteEntireRoll>().Where(i => i.id == id).FirstOrDefaultAsync();
             }
 
-            public Task<int> SaveItemAsync(EntireRoll item)
+            public Task<int> SaveItemAsync(SQLiteEntireRoll item)
             {
                 if (item.id != 0)
                 {
@@ -62,7 +61,7 @@ namespace DiceMaster.data
                 }
             }
 
-            public Task<int> DeleteItemAsync(EntireRoll item)
+            public Task<int> DeleteItemAsync(SQLiteEntireRoll item)
             {
                 return Database.DeleteAsync(item);
             }
