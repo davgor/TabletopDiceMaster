@@ -36,17 +36,17 @@ namespace DiceMaster.data
 
             public Task<List<SQLiteEntireRoll>> GetItemsAsync()
             {
-                return Database.Table<SQLiteEntireRoll>().ToListAsync();
-            }
+            return Database.QueryAsync<SQLiteEntireRoll>("SELECT * FROM [SQLiteEntireRoll] ORDER BY date DESC");
+        }
 
             public Task<List<SQLiteEntireRoll>> GetFavorites()
             {
-                return Database.QueryAsync<SQLiteEntireRoll>("SELECT * FROM [EntireRoll] WHERE [favorite] = true");
+                return Database.QueryAsync<SQLiteEntireRoll>("SELECT * FROM [SQLiteEntireRoll] WHERE [favorite] = true ORDER BY date DESC");
             }
 
             public Task<SQLiteEntireRoll> GetItemAsync(int id)
             {
-                return Database.Table<SQLiteEntireRoll>().Where(i => i.id == id).FirstOrDefaultAsync();
+                return Database.Table<SQLiteEntireRoll>().Where(i => i.id == id).OrderBy(i => i.date).FirstOrDefaultAsync();
             }
 
             public Task<int> SaveItemAsync(SQLiteEntireRoll item)

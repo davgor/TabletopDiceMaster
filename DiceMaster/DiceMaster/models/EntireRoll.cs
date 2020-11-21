@@ -13,6 +13,7 @@ namespace DiceMaster.models
         public int id { get; set; }
         public ObservableCollection<DiceRoll> all { get; set; }
         public string Name { get; set; }
+        public DateTime date { get; set; }
         public void ReRollEntireRoll()
         {
             foreach (DiceRoll diceRoll in all)
@@ -24,6 +25,7 @@ namespace DiceMaster.models
         {
             id = sQLiteEntireRoll.id;
             Name = sQLiteEntireRoll.Name;
+            date = sQLiteEntireRoll.date;
             all = JsonConvert.DeserializeObject<ObservableCollection<DiceRoll>>(sQLiteEntireRoll.entireRollString);
         }
     }

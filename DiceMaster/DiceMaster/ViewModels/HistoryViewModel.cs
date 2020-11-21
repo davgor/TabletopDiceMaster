@@ -10,10 +10,13 @@ namespace DiceMaster.ViewModels
 {
     public class HistoryViewModel : BaseViewModel
     {
-        ObservableCollection<EntireRoll> HistoryLog { get; set; }
+        public ObservableCollection<EntireRoll> HistoryLog { get; } = new ObservableCollection<EntireRoll>();
         public HistoryViewModel()
         {
-            HistoryLog = new ObservableCollection<EntireRoll>();
+            updateDb();
+        }
+        public void updateDb()
+        {
             Task<List<SQLiteEntireRoll>> SQLiteList = App.Database.GetItemsAsync();
             foreach (SQLiteEntireRoll sQLiteEntireRoll in SQLiteList.Result)
             {
