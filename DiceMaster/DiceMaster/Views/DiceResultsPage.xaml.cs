@@ -21,6 +21,11 @@ namespace DiceMaster.Views
             InitializeComponent();
             BindingContext = _viewModel = new DiceResultsViewModel(submittedRolls);
         }
+        public DiceResultsPage(ObservableCollection<DiceRoll> submittedRolls, string function)
+        {
+            InitializeComponent();
+            BindingContext = _viewModel = new DiceResultsViewModel(submittedRolls, function);
+        }
 
         private async void Button_Clicked(object sender, EventArgs e)
         {

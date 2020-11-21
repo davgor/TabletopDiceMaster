@@ -12,36 +12,14 @@
                             <Expander>
                                 <Expander.Header>
                                     <StackLayout>
-                                        <Label Text="{Binding date, StringFormat='Roll Time: {0}'}"/>
+                                        <Label Text="{Binding Name, StringFormat='{0}'}"/>
                                     </StackLayout>
                                 </Expander.Header>
-                                <Expander>
-                                    <Expander.Header>
-                                        <StackLayout>
-                                            <CollectionView ItemsSource="{Binding all}">
-                                                <CollectionView.ItemTemplate>
-                                                    <DataTemplate>
-                                                        <StackLayout>
-                                                            <Label Text="{Binding id, StringFormat='Dice Roll: {0}'}"/>
-                                                            <CollectionView ItemsSource="{Binding RepeatingDiceList}">
-                                                                <CollectionView.ItemTemplate>
-                                                                    <DataTemplate>
-                                                                        <StackLayout>
-                                                                            <Label Text="{Binding DiceFace, StringFormat='Individual Roll: {0}'}" 
-                                                                           VerticalOptions="Center"
-                                                                           TextColor="#20232F"
-                                                                           Grid.Column="0"/>
-                                                                        </StackLayout>
-                                                                    </DataTemplate>
-                                                                </CollectionView.ItemTemplate>
-                                                            </CollectionView>
-                                                        </StackLayout>
-                                                    </DataTemplate>
-                                                </CollectionView.ItemTemplate>
-                                            </CollectionView>
-                                        </StackLayout>
-                                    </Expander.Header>
-                                </Expander>
+                                <Button Clicked="rowClick"
+                                        ClassId="{Binding Name}"
+                                        Text="Advanced Functions"
+                                        BackgroundColor="#20232F"
+                                        TextColor="#90829E"/>
                             </Expander>
                         </StackLayout>
                     </DataTemplate>

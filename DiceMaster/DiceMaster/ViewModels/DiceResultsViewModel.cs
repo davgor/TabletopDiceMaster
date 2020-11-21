@@ -24,6 +24,10 @@ namespace DiceMaster.ViewModels
             }
             saveObject("");
         }
+        public DiceResultsViewModel(ObservableCollection<DiceRoll> submittedRolls, string function)
+        {
+            DiceRows = submittedRolls;
+        }
         public DiceResultsViewModel(EntireRoll oldRoll)
         {
             DiceRows = oldRoll.all;

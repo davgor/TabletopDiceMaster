@@ -25,5 +25,18 @@ namespace DiceMaster.ViewModels
                 HistoryLog.Add(entireRoll);
             }
         }
+
+        public EntireRoll getHistoryDiceRows(DateTime rowId)
+        {
+            EntireRoll entireRoll = new EntireRoll();
+            foreach(EntireRoll temp in HistoryLog)
+            {
+                if (temp.date == rowId)
+                {
+                    entireRoll = temp;
+                }
+            }
+            return entireRoll;
+        }
     }
 }
