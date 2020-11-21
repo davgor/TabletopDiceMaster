@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DiceMaster.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,11 @@ namespace DiceMaster.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FavoritePage : ContentPage
     {
+        public FavoriteViewModel _viewModel;
         public FavoritePage()
         {
             InitializeComponent();
+            BindingContext = _viewModel = new FavoriteViewModel();
         }
     }
 }

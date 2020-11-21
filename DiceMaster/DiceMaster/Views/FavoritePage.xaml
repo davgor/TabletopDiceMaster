@@ -5,9 +5,48 @@
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Favorites"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <CollectionView ItemsSource="{Binding FavoritesLog}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Expander>
+                                <Expander.Header>
+                                    <StackLayout>
+                                        <Label Text="{Binding date, StringFormat='Roll Time: {0}'}"/>
+                                    </StackLayout>
+                                </Expander.Header>
+                                <Expander>
+                                    <Expander.Header>
+                                        <StackLayout>
+                                            <CollectionView ItemsSource="{Binding all}">
+                                                <CollectionView.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <StackLayout>
+                                                            <Label Text="{Binding id, StringFormat='Dice Roll: {0}'}"/>
+                                                            <CollectionView ItemsSource="{Binding RepeatingDiceList}">
+                                                                <CollectionView.ItemTemplate>
+                                                                    <DataTemplate>
+                                                                        <StackLayout>
+                                                                            <Label Text="{Binding DiceFace, StringFormat='Individual Roll: {0}'}" 
+                                                                           VerticalOptions="Center"
+                                                                           TextColor="#20232F"
+                                                                           Grid.Column="0"/>
+                                                                        </StackLayout>
+                                                                    </DataTemplate>
+                                                                </CollectionView.ItemTemplate>
+                                                            </CollectionView>
+                                                        </StackLayout>
+                                                    </DataTemplate>
+                                                </CollectionView.ItemTemplate>
+                                            </CollectionView>
+                                        </StackLayout>
+                                    </Expander.Header>
+                                </Expander>
+                            </Expander>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
