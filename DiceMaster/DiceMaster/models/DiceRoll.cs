@@ -16,7 +16,7 @@ namespace DiceMaster.models
         public int modifier { get; set; }
         public ObservableCollection<Dice> DiceList { get; set; }
         public ObservableCollection<RepeatingDice> RepeatingDiceList { get; set; }
-        //public ICommand AdvancedFunctions  { get; set; }
+        
         public int total { get; set; }
         public void newDiceRoll(int newId)
         {
@@ -26,7 +26,6 @@ namespace DiceMaster.models
             modifier = 0;
             DiceList = new ObservableCollection<Dice>();
             RepeatingDiceList = new ObservableCollection<RepeatingDice>();
-            //AdvancedFunctions = new Command<string>(superRollerFunctions);
         }
         public void RollTheDie()
         {
@@ -120,41 +119,6 @@ namespace DiceMaster.models
             RepeatingDiceList.Clear();
             updateRepeatingList();
             return message;
-        }
-        async public void superRollerFunctions(string x)
-        {
-            string action = await Application.Current.MainPage.DisplayActionSheet("Advanced Functions", "Cancel", null, "Reroll specific", "Explode dice", "Roll again");
-            if (action.Equals("Reroll specific"))
-            {
-                action = await Application.Current.MainPage.DisplayPromptAsync("ReRolling", "Enter the Dice face you'd like to reroll", initialValue: "1", keyboard: Keyboard.Numeric);
-                string message = reRollOnNum(Int32.Parse(action));
-                if (message.Equals(""))
-                {
-                    await Application.Current.MainPage.DisplayAlert("Done", "Roll has been updated", "OK");
-
-                } 
-                else
-                {
-                    await Application.Current.MainPage.DisplayAlert("Error", message, "OK");
-                }
-
-            } 
-            else if (action.Equals("Explode dice"))
-            {
-                action = await Application.Current.MainPage.DisplayPromptAsync("ReRolling", "Enter the Dice face you'd like to Explode by 2", initialValue: "6", keyboard: Keyboard.Numeric);
-                string message = explodedsOnNum(Int32.Parse(action));
-                if (message.Equals(""))
-                {
-                    await Application.Current.MainPage.DisplayAlert("Done", "Roll has been updated", "OK");
-                }
-                else
-                {
-                    await Application.Current.MainPage.DisplayAlert("Error", message, "OK");
-                }
-            } else if (action.Equals("Roll again")) {
-                
-
-            }
         }
     }
 }

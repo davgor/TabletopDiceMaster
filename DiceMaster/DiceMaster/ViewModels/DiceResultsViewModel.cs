@@ -12,7 +12,7 @@ using static DiceMaster.data.DiceRollerDatabase;
 namespace DiceMaster.ViewModels
 {
     public class DiceResultsViewModel : BaseViewModel
-    {   
+    {
         SQLiteEntireRoll saveFormat { get; set; }
         public DiceResultsViewModel(ObservableCollection<DiceRoll> submittedRolls)
         {

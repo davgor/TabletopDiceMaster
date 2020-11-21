@@ -39,9 +39,9 @@ namespace DiceMaster.data
                 return Database.Table<SQLiteEntireRoll>().ToListAsync();
             }
 
-            public Task<List<SQLiteEntireRoll>> GetItemsNotDoneAsync()
+            public Task<List<SQLiteEntireRoll>> GetFavorites()
             {
-                return Database.QueryAsync<SQLiteEntireRoll>("SELECT * FROM [EntireRoll] WHERE [Done] = 0");
+                return Database.QueryAsync<SQLiteEntireRoll>("SELECT * FROM [EntireRoll] WHERE [favorite] = true");
             }
 
             public Task<SQLiteEntireRoll> GetItemAsync(int id)

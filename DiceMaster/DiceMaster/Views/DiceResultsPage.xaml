@@ -11,8 +11,8 @@
     <ContentPage.Content>
         <StackLayout>
             <CollectionView x:Name="ItemsListView"
-                ItemsSource="{Binding DiceRows}"
-                SelectionMode="None">
+                            ItemsSource="{Binding DiceRows}"
+                            SelectionMode="None">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Padding="10">
@@ -73,10 +73,11 @@
                                         </StackLayout>
                                     </Expander.Header>
                                     <StackLayout>
-                                        <Button Command="{Binding AdvancedFunctions}"
-                                        Text="Advanced Functions"
-                                        BackgroundColor="#20232F"
-                                        TextColor="#90829E"/>
+                                        <Button Clicked="rowClick"
+                                                ClassId="{Binding id}"
+                                                Text="Advanced Functions"
+                                                BackgroundColor="#20232F"
+                                                TextColor="#90829E"/>
                                         <CollectionView x:Name="Items2ListView"
                                                 ItemsSource="{Binding RepeatingDiceList}"
                                                 SelectionMode="None"
