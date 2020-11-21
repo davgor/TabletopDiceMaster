@@ -36,14 +36,13 @@ namespace DiceMaster.data
 
             public Task<List<SQLiteEntireRoll>> GetItemsAsync()
             {
-            return Database.QueryAsync<SQLiteEntireRoll>("SELECT * FROM [SQLiteEntireRoll] ORDER BY date DESC");
-        }
+                return Database.QueryAsync<SQLiteEntireRoll>("SELECT * FROM [SQLiteEntireRoll] ORDER BY date DESC");
+            }
 
             public Task<List<SQLiteEntireRoll>> GetFavorites()
             {
                 return Database.QueryAsync<SQLiteEntireRoll>("SELECT * FROM [SQLiteEntireRoll] WHERE [favorite] = true ORDER BY date DESC");
             }
-
             public Task<SQLiteEntireRoll> GetItemAsync(int id)
             {
                 return Database.Table<SQLiteEntireRoll>().Where(i => i.id == id).OrderBy(i => i.date).FirstOrDefaultAsync();
@@ -61,9 +60,11 @@ namespace DiceMaster.data
                 }
             }
 
-            public Task<int> DeleteItemAsync(SQLiteEntireRoll item)
+            public Task<List<SQLiteEntireRoll>> DeleteItemAsync(SQLiteEntireRoll item)
             {
-                return Database.DeleteAsync(item);
+                return Database.QueryAsync<SQLiteEntireRoll>("DELETE FROM [SQLiteEntireRoll] WHERE name = '" + item.Name + "'");
+                //return Database.DeleteAsync(item);
             }
+            
         }
 }

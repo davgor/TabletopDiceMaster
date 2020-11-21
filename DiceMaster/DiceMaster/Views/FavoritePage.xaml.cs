@@ -27,5 +27,11 @@ namespace DiceMaster.Views
             EntireRoll entireRoll = _viewModel.getFavoriteDiceRows(favoriteName);
             await Navigation.PushAsync(new DiceResultsPage(entireRoll.all));
         }
+        private void deleteFavorite(object sender, EventArgs e)
+        {
+            Button clicked = (Button)sender;
+            string favoriteName = clicked.ClassId;
+            _viewModel.deleteFavorite(favoriteName);
+        }
     }
 }

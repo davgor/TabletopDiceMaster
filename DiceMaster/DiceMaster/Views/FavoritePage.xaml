@@ -15,11 +15,24 @@
                                         <Label Text="{Binding Name, StringFormat='{0}'}"/>
                                     </StackLayout>
                                 </Expander.Header>
-                                <Button Clicked="rowClick"
-                                        ClassId="{Binding Name}"
-                                        Text="Advanced Functions"
-                                        BackgroundColor="#20232F"
-                                        TextColor="#90829E"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Button Clicked="rowClick"
+                                            ClassId="{Binding Name}"
+                                            Text="Re Roll"
+                                            BackgroundColor="#20232F"
+                                            Grid.Column="0"
+                                            TextColor="#90829E"/>
+                                    <Button Clicked="deleteFavorite"
+                                            ClassId="{Binding Name}"
+                                            Text="Delete"
+                                            BackgroundColor="#20232F"
+                                            Grid.Column="1"
+                                            TextColor="#90829E"/>
+                                </Grid>
                             </Expander>
                         </StackLayout>
                     </DataTemplate>

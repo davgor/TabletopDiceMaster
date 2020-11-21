@@ -1,6 +1,7 @@
 ﻿using DiceMaster.data;
 using DiceMaster.models;
 using DiceMaster.Views;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -36,6 +37,26 @@ namespace DiceMaster.ViewModels
                 }
             }
             return entireRoll;
+        }
+        async public void deleteFavorite(string name)
+        {
+            Task<List<SQLiteEntireRoll>> SQLiteList = App.Database.GetFavorites();
+            foreach (SQLiteEntireRoll sQLiteEntireRoll in SQLiteList.Result)
+            {
+                if(sQLiteEntireRoll.Name.Equals(name))
+                {
+                    var test = await App.Database.DeleteItemAsync(sQLiteEntireRoll);
+                }
+            }
+            EntireRoll entireRoll = new EntireRoll();
+            foreach (EntireRoll temp in FavoritesLog)
+            {
+                if (temp.Name.Equals(name))
+                {
+                    entireRoll = temp;
+                }
+            }
+            FavoritesLog.Remove(entireRoll);
         }
     }
 }
