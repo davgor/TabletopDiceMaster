@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DiceMaster.Views.FavoritePage"
+             BackgroundColor="#181619"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
@@ -9,31 +10,40 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout>
-                            <Expander>
-                                <Expander.Header>
-                                    <StackLayout>
-                                        <Label Text="{Binding Name, StringFormat='{0}'}"/>
-                                    </StackLayout>
-                                </Expander.Header>
-                                <Grid>
+                            <Frame OutlineColor="black" 
+                                   BackgroundColor="#6D7684"
+                                   Padding="20">
+                                <Expander>
+                                    <Expander.Header>
+                                        <StackLayout>
+                                        <Label Text="{Binding Name, StringFormat='{0}'}"
+                                               VerticalOptions="CenterAndExpand" 
+                                               HorizontalOptions="CenterAndExpand"
+                                               FontAttributes="Bold"
+                                               FontSize="Large"
+                                               TextColor="#20232F"/>
+                                        </StackLayout>
+                                    </Expander.Header>
+                                    <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition/>
                                         <ColumnDefinition/>
                                     </Grid.ColumnDefinitions>
-                                    <Button Clicked="rowClick"
+                                        <Button Clicked="rowClick"
                                             ClassId="{Binding Name}"
                                             Text="Re Roll"
                                             BackgroundColor="#20232F"
                                             Grid.Column="0"
                                             TextColor="#90829E"/>
-                                    <Button Clicked="deleteFavorite"
+                                        <Button Clicked="deleteFavorite"
                                             ClassId="{Binding Name}"
                                             Text="Delete"
                                             BackgroundColor="#20232F"
                                             Grid.Column="1"
                                             TextColor="#90829E"/>
-                                </Grid>
-                            </Expander>
+                                    </Grid>
+                                </Expander>
+                            </Frame>
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

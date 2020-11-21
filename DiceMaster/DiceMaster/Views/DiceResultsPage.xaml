@@ -78,10 +78,29 @@
                                                 Text="Advanced Functions"
                                                 BackgroundColor="#20232F"
                                                 TextColor="#90829E"/>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Label Text="Dice Face" 
+                                                   VerticalOptions="Center"
+                                                   TextColor="#20232F"
+                                                   Grid.Column="0"/>
+                                            <Label Text="Number of" 
+                                                   VerticalOptions="Center"
+                                                   TextColor="#20232F"
+                                                   Grid.Column="1"/>
+                                            <Label Text="Modified number" 
+                                                   VerticalOptions="Center"
+                                                   TextColor="#20232F"
+                                                   Grid.Column="2"/>
+                                        </Grid>
+
                                         <CollectionView x:Name="Items2ListView"
                                                 ItemsSource="{Binding RepeatingDiceList}"
-                                                SelectionMode="None"
-                                                EmptyView="No items currently exist !">
+                                                SelectionMode="None">
                                             <CollectionView.ItemTemplate>
                                                 <DataTemplate>
                                                     <StackLayout Padding="10">
