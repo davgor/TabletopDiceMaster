@@ -18,7 +18,11 @@ namespace DiceMaster.Views
         public FavoritePage()
         {
             InitializeComponent();
-            BindingContext = _viewModel = new FavoriteViewModel();
+            MessagingCenter.Subscribe<Object>(this, "second_tab", (obj) =>
+            {
+                BindingContext = _viewModel = new FavoriteViewModel();
+            });
+            
         }
         async private void rowClick(object sender, EventArgs e)
         {

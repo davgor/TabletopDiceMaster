@@ -29,9 +29,12 @@ namespace DiceMaster.ViewModels
         public EntireRoll getHistoryDiceRows(DateTime rowId)
         {
             EntireRoll entireRoll = new EntireRoll();
+
             foreach(EntireRoll temp in HistoryLog)
             {
-                if (temp.date == rowId)
+                string test = temp.date.ToString();
+                string selected = rowId.ToString();
+                if (test.Equals(selected))
                 {
                     entireRoll = temp;
                 }

@@ -18,7 +18,10 @@ namespace DiceMaster.Views
         public HistoryPage()
         {
             InitializeComponent();
-            BindingContext = _viewModel = new HistoryViewModel();
+            MessagingCenter.Subscribe<Object>(this, "third_tab", (obj) =>
+            {
+                BindingContext = _viewModel = new HistoryViewModel();
+            });
         }
         async private void rowClick(object sender, EventArgs e)
         {

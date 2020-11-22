@@ -16,5 +16,24 @@ namespace DiceMaster.Views
         {
             InitializeComponent();
         }
+        protected override void OnCurrentPageChanged()
+        {
+            base.OnCurrentPageChanged();
+
+            int index = Children.IndexOf(CurrentPage);
+
+            if (index == 0)
+            {
+                MessagingCenter.Send<Object>(this, "first_tab");
+            }
+            else if (index == 1)
+            {
+                MessagingCenter.Send<Object>(this, "second_tab");
+            }
+            else if (index == 2)
+            {
+                MessagingCenter.Send<Object>(this, "third_tab");
+            }
+        }
     }
 }

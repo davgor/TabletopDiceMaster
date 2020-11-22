@@ -472,3 +472,8 @@ C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\android\assets\System.Memory.dll
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\android\assets\System.Runtime.CompilerServices.Unsafe.dll
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\res\mipmap-hdpi\ic_launcher.png
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\res\mipmap-xhdpi\ic_launcher.png
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\res\mipmap-mdpi\ic_launcher.png
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\res\mipmap-xxhdpi\ic_launcher.png
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\res\mipmap-xxxhdpi\ic_launcher.png
