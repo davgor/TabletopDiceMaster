@@ -9,7 +9,6 @@ C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\ne
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\netstandard2.0\ref\DiceMaster.dll
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\netstandard2.0\DiceMaster.pdb
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
-C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\netstandard2.0\DiceMaster.csprojAssemblyReference.cache
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\netstandard2.0\Views\DiceRollPage.xaml.g.cs
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\netstandard2.0\Views\FavoritePage.xaml.g.cs
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster\obj\Debug\netstandard2.0\Views\HistoryPage.xaml.g.cs

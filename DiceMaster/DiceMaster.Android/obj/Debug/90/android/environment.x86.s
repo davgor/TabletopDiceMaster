@@ -2,8 +2,8 @@
 	.section	.rodata.env.str.1,"aMS",@progbits,1
 	.type	.L.env.str.1, @object
 .L.env.str.1:
-	.asciz	"com.companyname.dicemaster"
-	.size	.L.env.str.1, 27
+	.asciz	"com.davgorApps.dicemaster"
+	.size	.L.env.str.1, 26
 	.section	.data.application_config,"aw",@progbits
 	.type	application_config, @object
 	.p2align	2
@@ -71,7 +71,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.8,"aMS",@progbits,1
 	.type	.L.env.str.8, @object
 .L.env.str.8:
-	.asciz	"a63c5af4-e401-43c4-98dd-aaf08b16daab"
+	.asciz	"08aa9186-aa5b-4b15-b5ec-2c4e9aa4b654"
 	.size	.L.env.str.8, 37
 	.section	.rodata.env.str.9,"aMS",@progbits,1
 	.type	.L.env.str.9, @object
