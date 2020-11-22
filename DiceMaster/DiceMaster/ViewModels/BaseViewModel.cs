@@ -8,11 +8,10 @@ using System.Text;
 
 namespace DiceMaster.ViewModels
 {
-    public class BaseViewModel : INotifyPropertyChanged
+    public class BaseViewModel
     {
         public ObservableCollection<DiceRoll> DiceRows { get; set; }
 
-        public event PropertyChangedEventHandler PropertyChanged;
 
     }
 }

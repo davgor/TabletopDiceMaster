@@ -3,6 +3,7 @@ using DiceMaster.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,7 +48,7 @@ namespace DiceMaster.Views
                 }   
             } catch(Exception error)
             {
-
+                Debug.WriteLine(error);
             }
 
         }
@@ -89,7 +90,7 @@ namespace DiceMaster.Views
                     }
                 } catch(Exception e)
                 {
-
+                    Debug.WriteLine(e);
                 }
 
             }
@@ -109,7 +110,7 @@ namespace DiceMaster.Views
                     }
                 } catch (Exception e)
                 {
-
+                    Debug.WriteLine(e);
                 }
             }
             else if (function.Equals("Roll again"))
@@ -125,7 +126,7 @@ namespace DiceMaster.Views
                     }
                 } catch(Exception e)
                 {
-
+                    Debug.WriteLine(e);
                 }
             }
         }
