@@ -29,14 +29,25 @@ namespace DiceMaster.Views
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            string result = await DisplayPromptAsync("Favorite", "What would you like to name this Roll set?");
-            if (result == "")
+            try
             {
-                await Application.Current.MainPage.DisplayAlert("Error", "Please enter a name", "OK");
-            } 
-            else
+                string result = await DisplayPromptAsync("Favorite", "What would you like to name this Roll set?");
+                var test = await App.Database.NameSearch(result);
+                if (test.Count == 0)
+                {
+                    _viewModel.saveObject(result);
+                    await Application.Current.MainPage.DisplayAlert("Done", "Favorite has been saved", "OK");
+                } else
+                {
+                    bool answer = await DisplayAlert("Overwrite?", "Favorite already exists overwrite?", "Yes", "No");
+                    if (answer)
+                    {
+                        _viewModel.overwriteObject(result);
+                    }
+                }   
+            } catch(Exception error)
             {
-                _viewModel.saveObject(result);
+
             }
 
         }
@@ -105,7 +116,13 @@ namespace DiceMaster.Views
             {
                 try
                 {
-
+                    string action = await Application.Current.MainPage.DisplayPromptAsync("Filter roll", "Enter number you would like to use for the next roll EX: 4 means reroll modified roll above a 4", initialValue: "3", keyboard: Keyboard.Numeric);
+                    if (Int32.Parse(action) < 0)
+                    {
+                        _viewModel.DiceRows.Clear();
+                        _viewModel.DiceRows.Add(affectedRoll.nextRoll(Int32.Parse(action)));
+                        await Application.Current.MainPage.DisplayAlert("Done", "Roll has been updated", "OK");
+                    }
                 } catch(Exception e)
                 {
 

@@ -120,5 +120,24 @@ namespace DiceMaster.models
             updateRepeatingList();
             return message;
         }
+        public DiceRoll nextRoll(int num)
+        {
+            DiceRoll next = new DiceRoll();
+            next.id = 1;
+            next.DiceType = this.DiceType;
+            next.modifier = 0;
+            next.count = 0;
+            foreach(Dice roll in DiceList)
+            {
+                if (roll.modifiedResult >= num)
+                {
+                    next.count++;
+                }
+            }
+            next.DiceList = new ObservableCollection<Dice>();
+            next.RepeatingDiceList = new ObservableCollection<RepeatingDice>();
+            next.RollDiceSet();
+            return next;
+        }
     }
 }

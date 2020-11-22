@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace DiceMaster.ViewModels
 {
@@ -57,6 +58,7 @@ namespace DiceMaster.ViewModels
                 }
             }
             FavoritesLog.Remove(entireRoll);
+            await Application.Current.MainPage.DisplayAlert("Done", "Favorite has been deleted", "OK");
         }
     }
 }

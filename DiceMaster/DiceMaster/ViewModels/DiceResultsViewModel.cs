@@ -40,5 +40,10 @@ namespace DiceMaster.ViewModels
             saveFormat.entireRollString = JsonConvert.SerializeObject(DiceRows);
             saveFormat.SQLiteSave();
         }
+        async public void overwriteObject(string name)
+        {
+            await App.Database.DeleteItemAsyncName(name);
+            saveObject(name);
+        }
     }
 }

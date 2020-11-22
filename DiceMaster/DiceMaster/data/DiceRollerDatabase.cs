@@ -59,12 +59,19 @@ namespace DiceMaster.data
                     return Database.InsertAsync(item);
                 }
             }
-
-            public Task<List<SQLiteEntireRoll>> DeleteItemAsync(SQLiteEntireRoll item)
-            {
-                return Database.QueryAsync<SQLiteEntireRoll>("DELETE FROM [SQLiteEntireRoll] WHERE name = '" + item.Name + "'");
-                //return Database.DeleteAsync(item);
-            }
-            
+        public Task<List<SQLiteEntireRoll>> NameSearch(string item)
+        {
+            return Database.QueryAsync<SQLiteEntireRoll>("SELECT * FROM [SQLiteEntireRoll] WHERE name = '" + item + "'");
         }
+
+        public Task<List<SQLiteEntireRoll>> DeleteItemAsync(SQLiteEntireRoll item)
+        {
+            return Database.QueryAsync<SQLiteEntireRoll>("DELETE FROM [SQLiteEntireRoll] WHERE name = '" + item.Name + "'");
+        }
+        public Task<List<SQLiteEntireRoll>> DeleteItemAsyncName(string item)
+        {
+            return Database.QueryAsync<SQLiteEntireRoll>("DELETE FROM [SQLiteEntireRoll] WHERE name = '" + item + "'");
+        }
+
+    }
 }

@@ -39,14 +39,21 @@ namespace DiceMaster.ViewModels
         public string runEdits()
         {
             string message = "";
-            foreach(DiceRoll testing in DiceRows)
+            if (!(DiceRows.Count == 0))
             {
-                if (testing.count == 0)
+                foreach (DiceRoll testing in DiceRows)
                 {
-                    message = "Dice Roll: " + testing.id + " Quantity must be numeric, and greater then zero" ;
+                    if (testing.count == 0)
+                    {
+                        message = "Dice Roll: " + testing.id + " Quantity must be numeric, and greater then zero";
+                    }
+
                 }
-                
+            } else
+            {
+                message = "Add in a dice roll to see the results!";
             }
+
             return message;
         }
     }

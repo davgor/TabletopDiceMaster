@@ -66,6 +66,26 @@
                         </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
+                <CollectionView.EmptyView>
+                    <ContentView>
+                        <StackLayout HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="CenterAndExpand">
+                            <Label Text="No rolls selected"
+                                   Margin="10,25,10,10"
+                                   FontAttributes="Bold"
+                                   FontSize="18"
+                                   HorizontalOptions="Fill"
+                                   HorizontalTextAlignment="Center" 
+                                   TextColor="#90829E"/>
+                            <Label Text="Hit the little plus to add one in!"
+                                   FontAttributes="Italic"
+                                   FontSize="12"
+                                   HorizontalOptions="Fill"
+                                   HorizontalTextAlignment="Center" 
+                                   TextColor="#90829E"/>
+                        </StackLayout>
+                    </ContentView>
+                </CollectionView.EmptyView>
             </CollectionView>
             <Grid>
                 <Grid.RowDefinitions>
