@@ -1,5 +1,3 @@
-C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\bin\Debug\DiceMaster.Android.dll
-C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\bin\Debug\DiceMaster.Android.pdb
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\bin\Debug\DiceMaster.dll
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\bin\Debug\DiceMaster.pdb
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
@@ -14,8 +12,6 @@ C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\DiceMaster.Android.csproj.CoreCompileInputs.cache
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\XamlC.stamp
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\DiceMaster.Android.csproj.CopyComplete
-C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\DiceMaster.Android.dll
-C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\DiceMaster.Android.pdb
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\android\bin\base.zip
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\res\layout\tabbar.xml
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\res\layout\toolbar.xml
@@ -478,3 +474,11 @@ C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\android\bin\com.davgorApps.dicemaster.aab
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\android\bin\com.davgorApps.dicemaster.apks
 C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\android\src\com\davgorapps\dicemaster\R.java
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\bin\Debug\DiceGoblin.Android.dll
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\bin\Debug\DiceGoblin.Android.pdb
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\aapt_rules.txt
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\DiceGoblin.Android.dll
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\DiceGoblin.Android.pdb
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\android\assets\DiceGoblin.Android.dll
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\android\assets\DiceGoblin.Android.pdb
+C:\apps\TabletopDiceMaster\TabletopDiceMaster\DiceMaster\DiceMaster.Android\obj\Debug\90\android\src\crc643794b7e65313bd6e\MainActivity.java

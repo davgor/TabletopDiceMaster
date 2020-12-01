@@ -110,11 +110,14 @@ namespace DiceMaster.Views
                 else if (function.Equals("Roll again"))
                 {
                     string action = await Application.Current.MainPage.DisplayPromptAsync("Filter roll", "Enter number you would like to use for the next roll EX: 4 means reroll modified roll above a 4", initialValue: "3", keyboard: Keyboard.Numeric);
-                    if (Int32.Parse(action) < 0)
+                    if (Int32.Parse(action) > 0)
                     {
-                        _viewModel.DiceRows.Clear();
-                        _viewModel.DiceRows.Add(affectedRoll.nextRoll(Int32.Parse(action)));
+                        ObservableCollection<DiceRoll> newRolls = new ObservableCollection<DiceRoll>();
+                        newRolls = _viewModel.DiceRows;
+                        newRolls.Clear();
+                        newRolls.Add(affectedRoll.nextRoll(Int32.Parse(action)));
                         await Application.Current.MainPage.DisplayAlert("Done", "Roll has been updated", "OK");
+                        //await Navigation.PushAsync((new DiceResultsPage(newRolls)));
                     }
                 }
             } catch (Exception e)
